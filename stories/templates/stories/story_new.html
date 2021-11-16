@@ -1,0 +1,12 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+  <div class="new-story">
+    <h2>Let's write a new story</h2>
+    <form class="site-form" action="{% url 'stories:new' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" name="" value="Create this story">
+    </form>
+  </div>
+{% endblock %}

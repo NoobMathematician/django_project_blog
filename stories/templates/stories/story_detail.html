@@ -1,0 +1,12 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<div class="story-detail">
+  <div class="story">
+      <img src="{{ story.thumb.url }}" />
+      <h2>{{ story.title }}</h2>
+      <p>{{ story.body }}</p>
+      <p>{{ story.date }}</p>
+  </div>
+</div>
+{% endblock %}

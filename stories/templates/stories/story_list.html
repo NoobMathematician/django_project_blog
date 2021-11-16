@@ -1,0 +1,17 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+  <h1>Story list</h1>
+  <div class="stories">
+
+  {% for story in stories %}
+    <div class="story">
+      <h2><a href="{% url 'stories:detail' slug=story.slug %}">{{ story.title }}</a></h2>
+      <p>{{ story.snippet }}</p>
+      <p>{{ story.date }}</p>
+      <p class="writer">written by {{ story.writer.username }}</p>
+    </div>
+  {% endfor %}
+
+  </div>
+{% endblock %}
